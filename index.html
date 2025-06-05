@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color:gold">Sorting Algorithm Visualizer</h1>
+        <div class="controls">
+            <button onclick="generateArray()">Generate New Array</button>
+            <select id="algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="heap">Heap Sort</option>
+            </select>
+            <input type="number" id="array-size" placeholder="Enter number of elements">
+            <input type="text" id="array-values" placeholder="Enter numbers separated by commas">
+            <br>
+            <label for="speed">Speed:</label>
+            <input type="range" id="speed" min="10" max="500" value="100" onchange="updateSpeed(this.value)">
+            <button onclick="startSorting()">Start Sorting</button>
+        </div>
+        <div id="array-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
